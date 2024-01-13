@@ -1,0 +1,60 @@
+﻿@page
+@model Hotel_Reception_PROIECT.Pages.Cazari.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Creează</h1>
+
+<h4>Cazare</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Cazare.NumarCamera" class="control-label"></label>
+                <input asp-for="Cazare.NumarCamera" class="form-control" />
+                <span asp-validation-for="Cazare.NumarCamera" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cazare.Etaj" class="control-label"></label>
+                <input asp-for="Cazare.Etaj" class="form-control" />
+                <span asp-validation-for="Cazare.Etaj" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cazare.TipCamera" class="control-label"></label>
+                <input asp-for="Cazare.TipCamera" class="form-control" />
+                <span asp-validation-for="Cazare.TipCamera" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cazare.Disponibilitate" class="control-label"></label>
+                <input asp-for="Cazare.Disponibilitate" class="form-control" />
+                <span asp-validation-for="Cazare.Disponibilitate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+<style>
+  
+    body {
+        background-color:goldenrod;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+</style>

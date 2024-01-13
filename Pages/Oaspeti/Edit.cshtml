@@ -1,0 +1,65 @@
+﻿@page
+@model Hotel_Reception_PROIECT.Pages.Oaspeti.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Oaspete</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Oaspete.ID" />
+            <div class="form-group">
+                <label asp-for="Oaspete.Nume" class="control-label"></label>
+                <input asp-for="Oaspete.Nume" class="form-control" />
+                <span asp-validation-for="Oaspete.Nume" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Oaspete.Prenume" class="control-label"></label>
+                <input asp-for="Oaspete.Prenume" class="form-control" />
+                <span asp-validation-for="Oaspete.Prenume" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Oaspete.Email" class="control-label"></label>
+                <input asp-for="Oaspete.Email" class="form-control" />
+                <span asp-validation-for="Oaspete.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Oaspete.Telefon" class="control-label"></label>
+                <input asp-for="Oaspete.Telefon" class="form-control" />
+                <span asp-validation-for="Oaspete.Telefon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Oaspete.CheckIn" class="control-label"></label>
+                <input asp-for="Oaspete.CheckIn" class="form-control" />
+                <span asp-validation-for="Oaspete.CheckIn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Oaspete.CheckOut" class="control-label"></label>
+                <input asp-for="Oaspete.CheckOut" class="form-control" />
+                <span asp-validation-for="Oaspete.CheckOut" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Oaspete.TipCameraOcupata" class="control-label"></label>
+                <input asp-for="Oaspete.TipCameraOcupata" class="form-control" />
+                <span asp-validation-for="Oaspete.TipCameraOcupata" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

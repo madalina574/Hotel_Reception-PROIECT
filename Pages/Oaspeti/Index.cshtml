@@ -1,0 +1,74 @@
+﻿@page
+@model Hotel_Reception_PROIECT.Pages.Oaspeti.IndexModel
+
+@{
+    ViewData["Title"] = "Oaspeți Înregistrați";
+}
+
+<h1>Listă Oaspeți</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Oaspete[0].Nume)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Oaspete[0].Prenume)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Oaspete[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Oaspete[0].Telefon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Oaspete[0].CheckIn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Oaspete[0].CheckOut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Oaspete[0].TipCameraOcupata)
+            </th>
+            <th>
+                <a asp-page="Create" class="btn btn-sm btn-success">
+                    Oaspete Nou
+                </a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Oaspete) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prenume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CheckIn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CheckOut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipCameraOcupata)
+            </td>
+            <td>
+                    <a asp-page="./Edit" class="btn btn btn-success" asp-route-id="@item.ID">Editare</a>
+                    <a asp-page="./Details" class="btn btn btn-success" asp-route-id="@item.ID">Detalii</a>
+                    <a asp-page="./Delete" class="btn btn btn-success" asp-route-id="@item.ID">Anulare</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

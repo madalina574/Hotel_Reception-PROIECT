@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Hotel_Reception_App</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Hotel_Reception_PROIECT.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/styles.css" />
+</head>
+<body>
+    <header>
+        <!DOCTYPE html>
+        <html>
+        <head>
+       
+
+            <style>
+               
+                #headerButton1, #headerButton2 , #headerButton3, #headerButton4, #headerButton5 {
+                    padding: 10px 15px;
+                    margin: 0 10px;
+                    text-decoration: none;
+                    color: #fff;
+                    background-color: darkgoldenrod;
+                    border-radius: 5px;
+                    border: 1px solid #2980b9;
+                    transition: background-color 0.3s ease, color 0.3s ease;
+                }
+
+                #headerButton1:hover, #headerButton2:hover, #headerButton3:hover, #headerButton4:hover, #headerButton5:hover {
+                        background-color: #2980b9;
+                        color: #fff;
+                }
+            </style>
+        </head>
+        <body>
+         
+            <header>
+                <nav>
+                 
+                    <a href="Oaspeti/Index" id="headerButton1">Oaspeti</a>
+
+                    <a href="/Index" id="headerButton2">Acasă</a>
+
+                    <a href="Cazari/Index" id="headerButton3">Cazări</a>
+
+                    <a href="Parcari/Index" id="headerButton4">Parcări</a>
+
+                    <a href="/Privacy" id="headerButton5">Confidențialitate</a>
+
+
+                    
+                </nav>
+            </header>
+
+           
+            <div class="container">
+                @RenderBody()
+            </div>
+        </body>
+    </html>
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - Hotel_Reception_PROIECT - <a asp-area="" asp-page="/Privacy">Confidențialitate</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
